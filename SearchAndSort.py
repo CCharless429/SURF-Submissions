@@ -121,20 +121,21 @@ random.shuffle(shuffled)
 # test_cases_2.append(shuffled)
 
 # random, unsorted test lists for sorts
+# creates 100 random lists, with values going from 0 to 100,000 with a random length from 1 to 10000
 test_cases_3 = []
 for i in range(100):
     one_test = []
-    for i in range(10000):
+    for i in range(random.randint(1, 10000)):
         one_test.append(random.randint(0, 100000))
     test_cases_3.append(one_test)
 
 # random, sorted test lists for sorts
+# creates 100 random lists, with values going from 0 to 100,000 with a random length from 1 to 10000
 test_cases_4 = []
 for i in range(100):
-    one_test = []
-    for i in range(10000):
-        one_test.append(random.randint(0, 100000))
-    one_test.sort()
+    one_test = [0]
+    for i in range(random.randint(1, 10000)):
+        one_test.append(one_test[-1] + random.randint(0, 20))
     test_cases_4.append(one_test)
 
 
